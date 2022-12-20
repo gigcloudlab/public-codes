@@ -1,8 +1,8 @@
-#Setup Variables
-#Ensure it's the AD DNS (Check using PowerShell#- DNSClientServerAddress)
-#Userone password = "Admin2023"
-$DCName = "ad.lab"
-$LabComputers = "OU=Computers,OU=Lab,DC=ad,DC=lab"
-
-#Join Server to domain
-Add-Computer -credential ad\userone -DomainName $DCName -OUPath $LabComputers -restart
+#Set Execution Policy to allow script to run
+Set-ExecutionPolicy Bypass -Scope Process -Force 
+#Choco install and Choco Apps
+iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+choco install googlechrome -y
+choco install putty -y
+choco install notepadplusplus -y
+choco install winscp -y
