@@ -9,7 +9,3 @@ New-ADOrganizationalUnit -Name "Service Accounts" -Path $LabDCRoot -ProtectedFro
 New-ADOrganizationalUnit -Name "Servers" -Path $LabDCRoot -ProtectedFromAccidentalDeletion $False -Description "Lab Servers"
 New-ADOrganizationalUnit -Name "WVD" -Path $LabDCRoot -ProtectedFromAccidentalDeletion $False -Description "Lab WVD Session Hosts"
 New-ADOrganizationalUnit -Name "Computers" -Path $LabDCRoot -ProtectedFromAccidentalDeletion $False -Description "Lab Computers"
-
-#Add New Users
-New-ADUser -name "userone" -SamAccountName "userone" -DisplayName "User One" -GivenName "User" -Surname "One" -PasswordNeverExpires $true -Enabled $true -accountPassword (ConvertTo-SecureString -AsPlainText "Admin2023" -Force) -Path 'OU=Users,OU=Lab,DC=ad,DC=lab'
-New-ADUser -name "usertwo" -SamAccountName "usertwo" -DisplayName "User Two" -GivenName "User" -Surname "Two" -PasswordNeverExpires $true -Enabled $true -accountPassword (ConvertTo-SecureString -AsPlainText "Admin2023" -Force) -Path 'OU=Users,OU=Lab,DC=ad,DC=lab'
