@@ -10,7 +10,7 @@ choco install winscp -y
 choco install bginfo -y
 #Download Scripts to Set the rest of the Domain up when logged in
 New-Item -Path "c:\" -Name "Baselab" -ItemType "directory" -Force
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/gigcloudlab/public-codes/main/PowerShell/baselab_DomainSetup.ps1" -OutFile "C:\BaselabS\baselab_DomainSetup.ps1"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/gigcloudlab/public-codes/main/PowerShell/baselab_DomainSetup.ps1" -OutFile "C:\Baselab\baselab_DomainSetup.ps1"
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/gigcloudlab/public-codes/main/PowerShell/baselab_LabStructure.ps1" -OutFile "C:\Baselab\baselab_LabStructure.ps1"
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/gigcloudlab/public-codes/main/PowerShell/baselab_LabStructure.ps1" -OutFile "C:\Baselab\baselab_NewUsers.ps1"
 #Setup and Partition Data Disk
