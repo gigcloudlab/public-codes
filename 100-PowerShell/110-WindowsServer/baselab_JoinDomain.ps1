@@ -5,4 +5,4 @@ $DCName = "ad.lab"
 $LabComputers = "OU=Computers,OU=Lab,DC=ad,DC=lab"
 
 #Join Server to domain
-Add-Computer -credential ad\u-domadm -DomainName $DCName -OUPath $LabComputers -restart
+Add-Computer -credential ad\udomadm -DomainName $DCName -OUPath $LabComputers -restart
